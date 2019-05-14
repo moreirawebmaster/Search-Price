@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataTemplate
+    x:Class="SearchPrice.App.Custom.Templates.CoinTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ViewCell>
+        <Frame Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.20*" />
+                    <ColumnDefinition Width="0.60*" />
+                    <ColumnDefinition Width="0.20*" />
+                </Grid.ColumnDefinitions>
+
+                <Image
+                    Grid.Row="0"
+                    Grid.RowSpan="3"
+                    Grid.Column="0"
+                    Aspect="AspectFit"
+                    HorizontalOptions="Center"
+                    Source="{Binding Simbolo}" />
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Simbolo: " />
+                            <Span Text="{Binding Simbolo}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Moeda: " />
+                            <Span Text="{Binding NomeFormatado}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Tipo Moeda: " />
+                            <Span Text="{Binding TipoMoeda}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Image
+                    Grid.Row="0"
+                    Grid.RowSpan="3"
+                    Grid.Column="2"
+                    HorizontalOptions="End"
+                    Source="ic_keyboard_arrow_right_black" />
+
+            </Grid>
+        </Frame>
+    </ViewCell>
+
+</DataTemplate>

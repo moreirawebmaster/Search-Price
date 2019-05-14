@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SearchPrice.App.Pages.DetailCoinPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:templates="clr-namespace:SearchPrice.App.Custom.Templates;assembly=SearchPrice.App">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image
+                Margin="25"
+                Aspect="AspectFit"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                Source="{Binding CoinModel.Simbolo}"
+                WidthRequest="80" />
+
+            <ListView
+                HasUnevenRows="True"
+                ItemsSource="{Binding Details}"
+                RowHeight="60"
+                SelectionMode="None"
+                SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <templates:DetailTemplate />
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

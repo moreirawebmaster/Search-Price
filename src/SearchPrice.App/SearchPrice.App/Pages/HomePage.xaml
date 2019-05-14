@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SearchPrice.App.Pages.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:templates="clr-namespace:SearchPrice.App.Custom.Templates;assembly=SearchPrice.App">
+    <ContentPage.Content>
+        <ListView
+            HasUnevenRows="True"
+            ItemTapped="ListView_OnItemTapped"
+            ItemsSource="{Binding Coins}"
+            RowHeight="60"
+            SelectionMode="None"
+            SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <templates:CoinTemplate />
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
